@@ -1,0 +1,14 @@
+table{
+    width: 100%;
+}
+table th{
+    text-align: center;
+}
+table td{
+    padding: 10px;
+    text-align: center;
+}
+.mat-column-Description{
+    width: 45% !important;
+    
+}

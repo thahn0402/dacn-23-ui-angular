@@ -1,0 +1,58 @@
+<div class="mt-5 p-3">
+    <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Tìm kiếm</mat-label>
+        <input name="searchKey" id="searchKey" matInput #searchkeyword (keyup)="searchByKeyWord(searchkeyword.value)"
+            placeholder="Tìm kiếm">
+    </mat-form-field>
+
+    <div *ngIf="showTable">
+        <table mat-table [dataSource]="productDetails" class="mat-elevation-z8">
+
+            <ng-container matColumnDef="Id">
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let element">{{element.productId}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Tên sản phẩm</th>
+                <td mat-cell *matCellDef="let element">{{element.productName}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef>Mô tả</th>
+                <td mat-cell *matCellDef="let element" style="text-align: left;">{{element.productDescription}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="actualPrice">
+                <th mat-header-cell *matHeaderCellDef>Giá</th>
+                <td mat-cell *matCellDef="let element">{{element.productActualPrice}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="discountedPrice">
+                <th mat-header-cell *matHeaderCellDef>Giá đã giảm</th>
+                <td mat-cell *matCellDef="let element">{{element.productDiscountedPrice}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef>Tác vụ</th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-icon-button color="primary" (click)="showImgaes(element)">
+                        <mat-icon>images </mat-icon>
+                    </button>
+                    <button mat-icon-button color="primary" (click)="editProductDetails(element.productId)">
+                        <mat-icon>edit </mat-icon>
+                    </button>
+                    <button mat-icon-button color="warn" (click)="deleteProduct(element.productId)">
+                        <mat-icon>delete </mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    <div class="text-center mt-3" *ngIf="showLoadMoreButton">
+        <button type="button" mat-flat-button color="primary" (click)="loadMoreProduct()">Xem thêm</button>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <div class="card" style="padding: 20px;">
+        <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Tên đăng nhập</mat-label>
+                <input ngModel name="userName" id="userName" matInput placeholder="Tên đăng nhập">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Tên</mat-label>
+                <input ngModel name="useFirstrName" id="useFirstrName" matInput placeholder="Tên">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Họ</mat-label>
+                <input ngModel name="userLastName" id="userLastName" matInput placeholder="Họ">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Mật khẩu</mat-label>
+                <input type="password" ngModel name="userPassword" id="userPassword" matInput placeholder="Mật khẩu">
+            </mat-form-field>
+
+            <div class="text-center">
+                <button type="submit" mat-raised-button color="primary">Đăng kí</button>
+            </div>
+
+        </form>
+    </div>
+</div>
