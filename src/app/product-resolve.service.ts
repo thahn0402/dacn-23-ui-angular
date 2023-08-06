@@ -41,3 +41,4 @@ export class ProductResolveService implements Resolve<Product> {
     };
   }
 }
+
