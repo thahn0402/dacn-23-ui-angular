@@ -26,3 +26,4 @@ export class BuyProductResolverService implements Resolve<Product[]> {
 
   }
 }
+
