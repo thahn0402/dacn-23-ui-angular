@@ -9,7 +9,7 @@ describe('BuyProductResolverService', () => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(BuyProductResolverService);
   });
-
+ 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });

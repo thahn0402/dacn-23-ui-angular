@@ -12,7 +12,7 @@ export class DragDirective {
   @HostBinding("style.background")
   private background = "#eee";
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer) { } 
 
   @HostListener("dragover", ["$event"])
   public onDragOver(evt: DragEvent) {

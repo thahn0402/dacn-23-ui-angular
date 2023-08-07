@@ -3,7 +3,7 @@
  
   @Injectable({
    providedIn: 'root',
- })
+ }) 
  export class UserAuthService {
    constructor() { }
  

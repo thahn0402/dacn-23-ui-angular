@@ -4,7 +4,7 @@
  import { UserAuthService } from './user-auth.service';
  
  @Injectable({
-   providedIn: 'root',
+    providedIn: 'root',
  })
  export class UserService {
    PATH_OF_API = 'http://localhost:9090';

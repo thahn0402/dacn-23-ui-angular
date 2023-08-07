@@ -9,7 +9,7 @@
     "src/main.ts",
     "src/polyfills.ts"
   ],
-  "include": [
+  "include": [ 
     "src/**/*.d.ts"
   ]
 }

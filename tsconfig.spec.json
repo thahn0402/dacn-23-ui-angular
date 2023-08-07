@@ -11,7 +11,7 @@
     "src/test.ts",
     "src/polyfills.ts"
   ],
-  "include": [
+  "include": [ 
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
   ]

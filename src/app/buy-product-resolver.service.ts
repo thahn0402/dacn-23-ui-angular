@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { ProductService } from './_services/product.service';
 import { ImageProcessingService } from './image-processing.service';
 import { map } from 'rxjs/operators';
-
+ 
 @Injectable({
   providedIn: 'root'
 })

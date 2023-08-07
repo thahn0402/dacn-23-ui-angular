@@ -15,7 +15,7 @@
      private userService: UserService,
      private userAuthService: UserAuthService,
      private router: Router
-   ) {}
+   ) {} 
  
    ngOnInit(): void {}
  

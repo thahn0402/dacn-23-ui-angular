@@ -8,7 +8,7 @@
  
  @Injectable({
    providedIn: 'root'
- })
+ }) 
  export class ProductService {
  
    constructor(private httpClient: HttpClient) { }
