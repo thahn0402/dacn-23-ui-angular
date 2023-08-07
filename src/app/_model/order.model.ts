@@ -10,4 +10,4 @@ export interface MyOrderDetails {
     orderAmount: number;
     product: Product;
     user: any;
-}
+} 

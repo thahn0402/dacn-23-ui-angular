@@ -7,4 +7,4 @@ export interface FileHandle{
     // type(picBytes: any, type: any): unknown;
     file: File,
     url: SafeUrl
-}
+} 
