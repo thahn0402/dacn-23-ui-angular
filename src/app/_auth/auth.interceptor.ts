@@ -22,12 +22,14 @@ export class AuthInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     if (req.headers.get('No-Auth') === 'True') {
       return next.handle(req.clone());
+
     }
 
     const token = this.userAuthService.getToken();
 
     if (token) {
       req = this.addToken(req, token);
+
     }
 
     return next.handle(req).pipe(
@@ -38,8 +40,10 @@ export class AuthInterceptor implements HttpInterceptor {
             this.router.navigate(['/login']);
           } else if (err.status === 403) {
             this.router.navigate(['/forbidden']);
+
           }
           return throwError("Some thing is wrong");
+
         }
       )
     );
@@ -51,6 +55,7 @@ export class AuthInterceptor implements HttpInterceptor {
       {
         setHeaders: {
           Authorization: `Bearer ${token}`
+          
         }
       }
     );
