@@ -18,11 +18,13 @@ export class AuthGuard implements CanActivate {
     private userAuthService: UserAuthService,
     private router: Router,
     private userService: UserService
+
   ) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
+
   ):
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree>
@@ -39,11 +41,13 @@ export class AuthGuard implements CanActivate {
         } else {
           this.router.navigate(['/forbidden']);
           return false;
+
         }
       }
     }
 
     this.router.navigate(['/login']);
     return false;
+
   }
 }
